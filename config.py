@@ -28,7 +28,7 @@ def univer(request):
 	note = fake.sentence(nb_words=6, variable_nb_words=True)
 	univer = {'name':name, 'address':address, 'exp_date':exp_date, 'limits':limits, 'note':note}
 	def teardown():
-		con = mdb.connect('fintegro.ca', 'fintegro', 'fintegro2014', 'basilisk_db');
+		con = mdb.connect('fintegro.ca', '', '', 'basilisk_db');
 		with con: 
 			cur = con.cursor()
 			cur.execute("DELETE FROM university WHERE name_ln = '" + univer['name'] + "'")
