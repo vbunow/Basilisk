@@ -199,7 +199,7 @@ class PublishQuizPage(BasiliskPage):
 		#self.publish_btn.click()
 
 class TakeQuizPage(BasiliskPage):
-	variants = Finds(by = By.ID, value = "questionvariants-variant_text")
+	variants = Finds(by = By.XPATH, value = ".//*[@class='custom-col input-dublicate variant-text']")
 	next_question = Find(by = By.ID, value = "next-question")
 
 @allure.step('Open the site Basilisk')
